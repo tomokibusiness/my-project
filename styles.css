@@ -1,0 +1,241 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid rgba(0,0,0,0.3);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fas fa-bars menu-icon{
+    width:56px;
+    height: 56px;
+    opacity:0.6;
+}
+
+.far fa-comment comment-icon{
+    height:40px;
+    width:40px;
+    opacity:0.6;
+}
+
+.far fa-bell bell-icon{
+    height:40px;
+    width:40px;
+    opacity:0.6;
+}
+
+.far fa-user profile-icon{
+    width:40px;
+    height: 40px;
+    opacity:0.6;
+}
+    
+
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: black;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 32px;
+    font-weight:Semi Bold Italic;
+    color: black;
+    margin-left:15px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    font-size:20px;
+    font-weight:Semi Bold Italic;
+    background-color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 15px;
+    height: 50px;
+    width:150px;
+    cursor: pointer;
+}
+
+
+
+.comment-icon, .bell-icon, .profile-icon {
+    font-size: 24px;
+    color: black;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.comment-icon:hover, .bell-icon:hover, .profile-icon:hover {
+    color: #007BFF;
+}
+
+.tag-list{
+    background-color:#fff;
+    padding:10px 0px;
+    margin-right:20px;
+    margin-left:20px;
+    overflow-x:auto;
+    white-space:nowrap;
+
+}
+
+.tag-list ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+.tag-list li{
+    display:inline;
+    margin-right:20px;
+    padding:5px 10px;
+    background-color:#fff;
+    border-radius:15px;
+    cursor:pointer;
+    transition:background-color 0.3s;
+}
+
+.search-container {
+    background-color: #4178E2; /* 検索窓の背景を黒に設定 */
+    padding: 10px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* 入力欄の背景を白に設定 */
+    border-radius: 30px;
+    padding: 5px 10px;
+    width: 300px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 16px;
+}
+.search-box .fa-search {
+    margin-right: 10px;
+    color: #333; /* アイコンの色を黒に設定 */
+}
+
+.recommendation {
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin-left:50px;
+    margin-top:80px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+.gallery-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit:cover;
+    aspect-ratio:1;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content:space-between;
+}
+.user-info img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+
+.user-info .like-button {
+    font-size: 20px;
+    color: #ff6b6b;
+    cursor: pointer;
+}
+
+.prompt {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    word-break: break-all; /* 長いプロンプトを改行する */
+    max-height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.prompt.collapsed {
+    max-height: none; /* 制限を解除 */
+}
+.read-more {
+    color: blue;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.prompt-section {
+    margin-top: 10px;
+}
+.prompt-label {
+    font-weight: bold;
+    color: #333;
+}
+.prompt-text {
+    font-size: 14px;
+    color: #666;
+    word-break: break-all;
+}
